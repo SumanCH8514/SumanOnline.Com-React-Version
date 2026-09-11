@@ -14,7 +14,8 @@ const SectionHeader = ({
       style={{
         textAlign: align,
         maxWidth: maxWidth,
-        margin: '0 auto'
+        margin: '0 auto',
+        padding: '0 1rem'
       }}
     >
       <motion.h1
@@ -22,11 +23,12 @@ const SectionHeader = ({
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         style={{
-          fontSize: 'clamp(2rem, 4.5vw, 3.2rem)',
-          marginBottom: '0.75rem',
+          fontSize: 'clamp(1.65rem, 5.2vw, 3rem)',
+          marginBottom: '0.6rem',
           color: 'var(--text)',
           fontWeight: 800,
-          lineHeight: 1.15
+          lineHeight: 1.18,
+          letterSpacing: '-0.5px'
         }}
       >
         {title} {highlight && <span style={{ color: 'var(--primary)' }}>{highlight}</span>}
@@ -39,9 +41,10 @@ const SectionHeader = ({
           transition={{ delay: 0.15, duration: 0.5 }}
           style={{
             color: 'var(--text-light)',
-            fontSize: '1.05rem',
+            fontSize: 'clamp(0.88rem, 2.5vw, 1.05rem)',
             lineHeight: 1.55,
-            margin: '0 auto'
+            margin: '0 auto',
+            maxWidth: '620px'
           }}
         >
           {subtitle}

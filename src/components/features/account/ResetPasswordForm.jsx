@@ -15,9 +15,9 @@ const ResetPasswordForm = ({ onSwitchToLogin }) => {
   };
 
   return (
-    <div className="wrapper account-wrapper">
+    <div className="account-wrapper">
       <h2>Reset Password</h2>
-      <p style={{ textAlign: 'center', color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem', marginBottom: '1.5rem' }}>
+      <p className="account-subtitle">
         Enter your registered email to receive reset instructions
       </p>
 
@@ -29,9 +29,9 @@ const ResetPasswordForm = ({ onSwitchToLogin }) => {
             marginBottom: '1rem',
             fontSize: '0.85rem',
             textAlign: 'center',
-            backgroundColor: statusMessage.type === 'error' ? 'rgba(255, 0, 0, 0.2)' : 'rgba(0, 255, 0, 0.2)',
-            border: `1px solid ${statusMessage.type === 'error' ? 'red' : 'green'}`,
-            color: '#ffffff'
+            backgroundColor: statusMessage.type === 'error' ? 'rgba(239, 68, 68, 0.15)' : 'rgba(16, 185, 129, 0.15)',
+            border: `1px solid ${statusMessage.type === 'error' ? 'var(--danger)' : 'var(--success)'}`,
+            color: statusMessage.type === 'error' ? 'var(--danger)' : 'var(--success)'
           }}
         >
           {statusMessage.text}

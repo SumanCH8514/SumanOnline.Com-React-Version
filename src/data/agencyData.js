@@ -3,7 +3,7 @@ export const agencyServicesData = [
     id: 'web-design',
     title: 'Website Design & UI/UX',
     icon: 'fas fa-palette',
-    tag: 'Design & Prototype',
+    tag: 'UI/UX Design',
     desc: 'Bespoke, high-converting UI/UX designs crafted in Figma. Modern layouts, glassmorphism, responsive grids, and design systems that stand out.',
     features: ['Custom UI/UX & Prototyping', 'Responsive Across All Devices', 'Modern Design Systems', 'Figma to Code Workflow']
   },
@@ -11,7 +11,7 @@ export const agencyServicesData = [
     id: 'web-development',
     title: 'Modern Web App Development',
     icon: 'fas fa-code',
-    tag: 'Full-Stack Engineering',
+    tag: 'Full-Stack Web',
     desc: 'Production-ready web applications built with React, Next.js, and TypeScript. Lightning-fast performance, SEO optimization, and secure API integrations.',
     features: ['React & Next.js Architecture', 'Single Page & SSR Apps', 'REST & GraphQL APIs', 'Performance & CWV Optimized']
   },
@@ -19,7 +19,7 @@ export const agencyServicesData = [
     id: 'mobile-apps',
     title: 'Mobile App Development',
     icon: 'fas fa-mobile-screen-button',
-    tag: 'iOS & Android',
+    tag: 'Mobile Apps',
     desc: 'Cross-platform and native mobile apps built with React Native and Flutter. Smooth 60fps animations, push notifications, and App Store ready.',
     features: ['Cross-Platform (iOS & Android)', 'React Native & Flutter', 'Offline Storage & Sync', 'App Store & Play Store Deployment']
   },
@@ -27,7 +27,7 @@ export const agencyServicesData = [
     id: 'cloud-backend',
     title: 'Cloud Backend & APIs',
     icon: 'fas fa-cloud-bolt',
-    tag: 'Scale & Security',
+    tag: 'Cloud & DevOps',
     desc: 'Scalable backend infrastructure using Node.js, Firebase, PostgreSQL, and serverless edge functions with robust authentication and security rules.',
     features: ['Firebase & SQL / NoSQL Databases', 'Authentication & Role Security', 'Microservices & Webhooks', 'Automated CI/CD Pipelines']
   }

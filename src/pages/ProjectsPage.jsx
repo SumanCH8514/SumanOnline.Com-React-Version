@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import SectionHeader from '@/components/common/SectionHeader';
 import ProjectCard from '@/components/features/projects/ProjectCard';
+import ProjectDetailModal from '@/components/features/projects/ProjectDetailModal';
 import { projectsData } from '@/data/projectsData';
 import { useDocumentTitle } from '@/hooks/useDocumentTitle';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -19,6 +20,7 @@ const ProjectsPage = () => {
   useDocumentTitle('Featured Projects');
 
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedProjectModal, setSelectedProjectModal] = useState(null);
 
   const categories = ['All', ...Array.from(new Set(projectsData.map((p) => p.category))).filter(Boolean)];
 
@@ -38,14 +40,14 @@ const ProjectsPage = () => {
   };
 
   return (
-    <div style={{ paddingBottom: '6rem' }}>
+    <div style={{ paddingBottom: '5rem' }}>
       <SectionHeader
         title="Our Featured"
         highlight="Creations"
         subtitle="A showcase of full-stack web applications, SaaS products, and custom digital platforms engineered with high-grade precision."
       />
 
-      <div className="category-filter-wrapper" style={{ marginTop: '1rem', marginBottom: '2.5rem' }}>
+      <div className="category-filter-wrapper" style={{ marginTop: '0.75rem', marginBottom: '1.75rem' }}>
         <div className="category-filter-container">
           {categories.map((category) => {
             const isSelected = selectedCategory === category;
@@ -70,14 +72,10 @@ const ProjectsPage = () => {
         </div>
       </div>
 
-      <section style={{ padding: '0 1.5rem', maxWidth: '1240px', margin: '0 auto' }}>
+      <section className="projects-grid-section">
         <motion.div
           layout
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            gap: '2rem'
-          }}
+          className="projects-grid-container"
         >
           <AnimatePresence>
             {filteredProjects.map((project) => (
@@ -88,16 +86,27 @@ const ProjectsPage = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.3 }}
+                style={{ width: '100%' }}
               >
-                <ProjectCard project={project} />
+                <ProjectCard
+                  project={project}
+                  onKnowMore={setSelectedProjectModal}
+                />
               </motion.div>
             ))}
           </AnimatePresence>
         </motion.div>
       </section>
+
+      {selectedProjectModal && (
+        <ProjectDetailModal
+          key={selectedProjectModal.id}
+          project={selectedProjectModal}
+          onClose={() => setSelectedProjectModal(null)}
+        />
+      )}
     </div>
   );
 };
 
 export default ProjectsPage;
-

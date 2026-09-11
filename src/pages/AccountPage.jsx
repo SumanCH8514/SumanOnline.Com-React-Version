@@ -26,35 +26,15 @@ const AccountPage = () => {
   useDocumentTitle(getTitle());
 
   return (
-    <div
-      style={{
-        position: 'relative',
-        minHeight: 'calc(100vh - 68px)',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: '2.5rem 1rem 3rem',
-        backgroundColor: '#0a0f1d',
-        overflow: 'hidden'
-      }}
-    >
+    <div className="account-page-container">
       <div
+        className="account-page-bg"
+        style={{ backgroundImage: `url(${heroBg1})` }}
         aria-hidden="true"
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          backgroundImage: `linear-gradient(rgba(10, 15, 29, 0.72), rgba(10, 15, 29, 0.85)), url(${heroBg1})`,
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-          zIndex: 0
-        }}
       />
+      <div className="account-page-overlay" aria-hidden="true" />
 
-      <div style={{ position: 'relative', zIndex: 1, width: '100%', display: 'flex', justifyContent: 'center' }}>
+      <div className="account-page-content">
         {isLoggedIn ? (
           <ProfileCard />
         ) : (

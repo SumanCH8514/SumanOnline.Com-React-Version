@@ -6,7 +6,7 @@ const ProfileCard = () => {
   const { user, logout } = useAuth();
 
   return (
-    <div className="wrapper account-wrapper" style={{ maxWidth: '420px', textAlign: 'center' }}>
+    <div className="account-wrapper" style={{ maxWidth: '420px', textAlign: 'center' }}>
       <div style={{ position: 'relative', display: 'inline-block', margin: '0 auto 1rem' }}>
         <img
           src={user?.avatar || siteConfig.branding.logoUrl}
@@ -16,8 +16,8 @@ const ProfileCard = () => {
             height: '80px',
             borderRadius: '50%',
             objectFit: 'cover',
-            border: '3px solid #4cc9f0',
-            boxShadow: '0 4px 15px rgba(76, 201, 240, 0.3)'
+            border: '3px solid var(--primary)',
+            boxShadow: '0 4px 15px rgba(67, 97, 238, 0.25)'
           }}
           onError={(e) => {
             e.target.onerror = null;
@@ -34,13 +34,13 @@ const ProfileCard = () => {
             height: '14px',
             borderRadius: '50%',
             backgroundColor: '#10b981',
-            border: '2px solid #ffffff'
+            border: '2px solid var(--card-bg)'
           }}
         />
       </div>
 
       <h2>{user?.name || siteConfig.author}</h2>
-      <p style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.9rem', marginBottom: '1.5rem' }}>
+      <p className="account-subtitle">
         {user?.email || 'suman@sumanonline.com'}
       </p>
 
@@ -50,13 +50,13 @@ const ProfileCard = () => {
           justifyContent: 'space-between',
           alignItems: 'center',
           padding: '0.85rem 1rem',
-          backgroundColor: 'rgba(255, 255, 255, 0.06)',
+          backgroundColor: 'rgba(67, 97, 238, 0.06)',
           borderRadius: '10px',
           marginBottom: '1rem',
-          border: '1px solid rgba(255, 255, 255, 0.1)'
+          border: '1px solid var(--card-border)'
         }}
       >
-        <span style={{ fontSize: '0.9rem', color: 'rgba(255, 255, 255, 0.8)' }}>Status</span>
+        <span style={{ fontSize: '0.9rem', color: 'var(--text-light)' }}>Status</span>
         <span style={{ fontSize: '0.8rem', fontWeight: '700', color: '#10b981', letterSpacing: '0.5px' }}>
           ✦ ACTIVE
         </span>
@@ -68,14 +68,14 @@ const ProfileCard = () => {
           justifyContent: 'space-between',
           alignItems: 'center',
           padding: '0.85rem 1rem',
-          backgroundColor: 'rgba(255, 255, 255, 0.06)',
+          backgroundColor: 'rgba(67, 97, 238, 0.06)',
           borderRadius: '10px',
           marginBottom: '1.5rem',
-          border: '1px solid rgba(255, 255, 255, 0.1)'
+          border: '1px solid var(--card-border)'
         }}
       >
-        <span style={{ fontSize: '0.9rem', color: 'rgba(255, 255, 255, 0.8)' }}>Account Type</span>
-        <span style={{ fontSize: '0.85rem', fontWeight: '600', color: '#4cc9f0' }}>
+        <span style={{ fontSize: '0.9rem', color: 'var(--text-light)' }}>Account Type</span>
+        <span style={{ fontSize: '0.85rem', fontWeight: '600', color: 'var(--primary)' }}>
           {user?.role || 'Developer'}
         </span>
       </div>
@@ -85,14 +85,15 @@ const ProfileCard = () => {
         onClick={logout}
         style={{
           width: '100%',
-          backgroundColor: 'rgba(239, 68, 68, 0.2)',
-          border: '1px solid #ef4444',
-          color: '#ef4444',
+          backgroundColor: 'rgba(239, 68, 68, 0.1)',
+          border: '1px solid var(--danger)',
+          color: 'var(--danger)',
           padding: '0.75rem',
           borderRadius: '8px',
           fontWeight: '600',
           cursor: 'pointer',
-          transition: 'all 0.2s ease'
+          transition: 'all 0.2s ease',
+          boxShadow: 'none'
         }}
       >
         <i className="fas fa-sign-out-alt" style={{ marginRight: '0.5rem' }}></i>
