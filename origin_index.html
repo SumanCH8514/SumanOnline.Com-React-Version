@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SumanOnline | Modern Web Solutions</title>
+    <meta name="description" content="SumanOnline.Com Home, Suman Online , Online Suman, Online Movies Suman" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://sumanonline.com/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://sumanonline.com/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://sumanonline.com/favicon/favicon-16x16.png">
+    <link rel="manifest" href="https://sumanonline.com/favicon/site.webmanifest">
+    <meta property="og:url" content="https://Sumanonline.com" />
+    <meta property="og:image" content="https://sumanonline.com/favicon/apple-touch-icon.png" />
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href='https://fonts.googleapis.com/css?family=Share+Tech|Orbitron:500' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<style>
+        /* Profile picture styles */
+        .profile-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid white;
+            position: relative;
+        }
+
+        .profile-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-arrow {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: var(--success);
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid white;
+        }
+
+        .dropdown-arrow i {
+            font-size: 10px;
+            color: white;
+        }
+
+        /* User info in dropdown */
+        .user-info {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+            text-align: center;
+        }
+
+        .user-info .profile-pic {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 0.5rem;
+        }
+
+        .user-info p {
+            font-weight: 500;
+            color: var(--primary);
+        }
+        
+        /* Form styles */
+        .logout-form {
+            display: contents;
+        }
+        
+        .logout-btn {
+            background: none;
+            border: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            padding: 0;
+            font: inherit;
+            color: var(--text);
+        }
+        
+        .logout-btn:hover {
+            color: var(--primary);
+        }
+        @media (max-width: 350px) {
+    .user-info p {
+    font-weight: 500;
+    color: #fe9c03;
+    text-shadow: 2px -1px #FF0000;
+}
+}
+
+    </style>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-globe"></i>
+                <span><a href="/" style="text-decoration: none; color: white;">SumanOnline.Com</a></span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="#" class="active">Home</a>
+                <a href="/Services/">Services</a>
+                <a href="https://sumanonline.com/Projects/">Projects</a>
+                <a href="/contact.html">Contact</a>
+                <a href="/pay-me/">Pay</a>
+                
+                <div class="dropdown">
+                                            
+                        <div class="dropdown-btn">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Account</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="dropdown-content">
+                            <a href="#"><i class="fas fa-user"></i> Profile</a>
+                            <a href="./accounts"><i class="fas fa-sign-in-alt"></i> Login/SignUp</a>
+                            <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                            <a href="#"><i class="fas fa-key"></i> Change Password</a>
+                        </div>
+                                    </div>
+            </div>
+
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero startContainer">
+        
+        <button class="button pulseText"><h1>Premium Web Solutions</h1></button>
+
+        <p>
+            Discover our collection of high-quality services designed to enhance
+            your digital experience.
+        </p>
+                    
+            <a href="./accounts" class="btn">Login</a>
+
+            <p>Login to continue and use exclusive features</p>
+        
+        
+    </section>
+
+    <section class="services">
+        <h2>Our Services</h2>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-film"></i>
+                </div>
+                <h3>Movie Streaming</h3>
+                <p>
+                    Enjoy unlimited access to our vast collection of movies in high
+                    quality
+                </p>
+                <a href="https://movies.sumanonline.com/" target="_blank" class="btn">Explore</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-music"></i>
+                </div>
+                <h3>Music Streaming</h3>
+                <p>
+                    Stream your favorite songs anytime, anywhere with our music service
+                </p>
+                <a href="https://songs.sumanonline.com/" target="_blank" class="btn">Listen Now</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-link"></i>
+                </div>
+                <h3>URL Shortener</h3>
+                <p>
+                    Create short, memorable links for your websites and social media
+                </p>
+                <a href="https://url.sumanonline.com/" target="_blank" class="btn">Shorten URLs</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <h3>Cloud Storage</h3>
+                <p>Secure and reliable cloud storage solutions for your files</p>
+                <a href="https://storage.sumanonline.com/" target="_blank" class="btn">Store Files</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Mobile Recharge</h3>
+                <p>Quick and easy mobile recharge for all major providers</p>
+                <a href="https://recharge.sumanonline.com/" target="_blank" class="btn">Recharge Now</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-download"></i>
+                </div>
+                <h3>Music Downloads</h3>
+                <p>Download your favorite tracks for offline listening</p>
+                <a href="https://music.sumanonline.com/" target="_blank" class="btn">Download</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-image"></i>
+                </div>
+                <h3>Photo Gallery</h3>
+                <p>
+                    Upload Images and Share, View and Download using Our GalleryWebApp
+                </p>
+                <a href="https://sumanonline.likesyou.org/PhotoGallery/" target="_blank" class="btn">View</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-image"></i>
+                </div>
+                <h3>Ghibli Image Converter</h3>
+                <p>
+                    Convert your pictures to Ghibli style using DAL-E AI model OpenAI
+                    API.
+                </p>
+                <a href="https://sumanonline.com/Projects/Ghibli" target="_blank" class="btn">Convert</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-face-smile"></i>
+                </div>
+                <h3>AI Image Generation</h3>
+                <p>
+                    Generate images using prompt text.
+                </p>
+                <a href="https://sumanonline.com/Projects/image-generation/" target="_blank" class="btn">Convert</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-bookmark"></i>
+                </div>
+                <h3>Photo Watermark Adder</h3>
+                <p>
+                    Add a watermark on the image.
+                </p>
+                <a href="https://sumanonline.likesyou.org/Watermark-gen/" target="_blank" class="btn">Convert</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fa-solid fa-music"></i>
+                </div>
+                <h3>Mp3 Metadata Editor</h3>
+                <p>
+                    Modify the metadata of mp3.
+                </p>
+                <a href="https://sumanonline.likesyou.org/SumanMp3Tag/" target="_blank" class="btn">Convert</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-exchange"></i>
+                </div>
+                <h3>M4A to Mp3 Converter</h3>
+                <p>
+                    Convert M4A to Mp3 files.
+                </p>
+                <a href="https://plyr.0-0-0.click/m4a-to-mp3/" target="_blank" class="btn">Convert</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-file-audio"></i>
+                </div>
+                <h3>Ringtone Downloader</h3>
+                <p>
+                    Download ringtone, Search ringtone.
+                </p>
+                <a href="https://sumanonline.com/Projects/ringtone/" target="_blank" class="btn">Visit</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-qrcode"></i>
+                </div>
+                <h3>Payment QR Generator</h3>
+                <p>
+                    Generate Payment UPI QR Code
+                </p>
+                <a href="https://sumanonline.com/pay-me/" target="_blank" class="btn">Generate</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-play"></i>
+                </div>
+                <h3>Online Video Player</h3>
+                <p>
+                    Play videos Online using link and videojs player.
+                </p>
+                <a href="https://plyr.0-0-0.click/SumanCND/new/" target="_blank" class="btn">Visit</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-sun"></i>
+                </div>
+                <h3>Demo</h3>
+                <p>
+                    Demo
+                </p>
+                <a href="https://sumanonline.com/" target="_blank" class="btn">Visit</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>About SumanOnline</h3>
+                <div class="ftr_logo main-div main-div1">
+                    <img
+                  src="https://sumanonline.com/Projects/Ghibli/assets/img/Gemini_Generated_Image_anod90anod90anod.jpg"
+                  width="90%"
+                  alt="sumanonline.com"
+                />
+                </div>
+                <p>
+                    SumanOnline.Com, Suman Online, Suman Online Web, Suman Chakrabortty. <br>We provide premium web services to enhance your digital experience
+            with high-quality solutions.
+                </p>
+                <div class="social-links">
+                    <a href="https://t.me/SumanOnline_Com"><i class="fab fa-telegram"></i></a>
+                    <a href="https://url.sumanonline.com/join-whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/in/sumanchakrabortty8514/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/SumanCH8514"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/SumanCH8514"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <p><i class="fas fa-globe"></i> <a href="https://sumanonline.likesyou.org/" target="_blank">
+                        SumanOnline.likesyou.org</a> </p>
+                <p><i class="fas fa-rupee-sign"></i> <a href="/pay-me/" target="_blank">
+                        Pay Online via QR</a> </p>
+                <p><i class="fa-solid fa-music"></i><a href="https://sumanmusic.0-0-0.click/"> Music</a></p>
+                <p><i class="fa-solid fa-link"></i><a href="https://url.sumanonline.com/"> URL Shortener</a></p>
+                <p> <i class="fa-solid fa-film"></i><a href="https://plyr.0-0-0.click/"> Movie Player</a></p>
+            </div>
+            <div class="footer-column">
+                <h3>Page Links</h3>
+                <p><i class="fas fa-angle-right"></i><a href="/contact.html" target="_blank"> Contact Us</a></p>
+                <p><i class="fas fa-angle-right"></i><a href="/RefundandCancellation.html"> Return policy</a></p>
+                <p><i class="fas fa-angle-right"></i><a href="/terms-and-conditions.html"> Terms and Conditions</a></p>
+                <p><i class="fas fa-angle-right"></i><a href="#"> Privacy Policy</a></p></a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:contact@sumanonline.com" target="_blank">contact@sumanonline.com</a></p>
+                <p><i class="fa-brands fa-telegram"></i> <a href="https://t.me/Contact_SumanOnline_bot" target="_blank">
+                        Contact On Telegram</a> </p>
+                
+            </div>
+        </div>
+    </footer>
+<script src="assets/js/script.js"></script>
+    <div id="copyright">
+        <p style="font-size: 0.7rem; text-align: center">
+            &copy; 2018-<span id="copyright1"></span>
+            <span id="copyright1">
+          <script>
+            document
+              .getElementById("copyright1")
+              .appendChild(document.createTextNode(new Date().getFullYear()));
+          </script>
+        </span>
+            <a href="https://sumanonline.com " target="_blank"
+                style="text-decoration: none; font-weight: bold">SumanOnline.com</a>
+            | All Rights Reserved.
+        </p>
+    </div>
+</body>
+
+</html>

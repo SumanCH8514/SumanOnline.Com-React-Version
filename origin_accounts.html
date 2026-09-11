@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page | SumanOnline</title>
+    <meta name="description"
+        content="Login page for SumanOnline.Com Home, Suman Online , Online Suman, Online Movies Suman" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://sumanonline.com/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://sumanonline.com/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://sumanonline.com/favicon/favicon-16x16.png">
+    <link rel="manifest" href="https://sumanonline.com/favicon/site.webmanifest">
+    <meta property="og:url" content="https://Sumanonline.com" />
+    <meta property="og:image" content="https://sumanonline.com/favicon/apple-touch-icon.png" />
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href='https://fonts.googleapis.com/css?family=Share+Tech|Orbitron:500' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="../assets/css/login-signup.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-globe"></i>
+                <span><a href="/" style="text-decoration: none; color: white;">SumanOnline.Com</a></span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="/">Home</a>
+                <a href="/Services/">Services</a>
+                <a href="https://sumanonline.com/Projects/">Projects</a>
+                <a href="/contact.html">Contact</a>
+                <a href="/pay-me/">Pay</a>
+
+
+                <div class="dropdown">
+                    <div class="dropdown-btn">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Account</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="#"><i class="fas fa-user"></i> Profile</a>
+                        <a href="#"><i class="fas fa-sign-in-alt"></i> Login/SignUp</a>
+                        <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                        <a href="#"><i class="fas fa-key"></i> Change Password</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <section class="services login-form">
+        <div class="wrapper">
+            <h2>Login</h2>
+            <form action="./endpoint/login.php" method="POST">
+                <div class="input-field">
+                    <input type="text" name="email" autocomplete="email" required>
+                    <label>Enter your email</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" name="password" autocomplete="current-password" required>
+                    <span class="show">SHOW</span>
+                    <label>Enter your password</label>
+                </div>
+                <div class="forget">
+                    <a href="#" onclick="showResetPassword(event)">Forgot password?</a>
+                </div>
+                <button type="submit">Log In</button><br>
+                <button type="submit" style="background-color: rgb(5, 17, 179); color: rgba(255, 255, 255, 0.521);">Login With Google</button>
+                <div class="register">
+                    <p>Don't have an account? <a href="#" onclick="showRegistration(event)">Signup Now</a></p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="services registration-form" style="display: none;">
+        <div class="wrapper">
+            <h2>SignUp</h2>
+            <form action="./endpoint/register.php" method="POST">
+                
+                <div class="input-field">
+                    <input type="text" name="email" autocomplete="email" required>
+                    <label>Enter your Email</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" name="password" autocomplete="none" required>
+                    <span class="show">SHOW</span>
+                    <label>Enter your Password</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" name="confirm_password" autocomplete="none" required>
+                    <span class="show">SHOW</span>
+                    <label>Confirm Password</label>
+                </div>
+                <button type="submit">Sign Up</button><br>
+                <button type="submit" style="background-color: rgb(5, 17, 179); color: rgba(255, 255, 255, 0.521);">Signup With Google</button>
+                <div class="register">
+                    <p>Already an User? <a href="#" onclick="showLogin(event)">Login here!</a></p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="reset-password-form" style="display: none;">
+        <div class="wrapper">
+            <h2>Reset Password</h2>
+            <form action="./endpoint/forgot-password.php" method="POST">
+                <div class="input-field">
+                    <input type="text" name="email" autocomplete="email" required>
+                    <label>Enter your email</label>
+                </div>
+                <button type="submit">Reset Password</button>
+                <div class="register">
+                    <p>Remember your password? <a href="#" onclick="showLogin(event)">Login here!</a></p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>About SumanOnline</h3>
+                <div class="ftr_logo main-div main-div1">
+                    <img
+                  src="https://sumanonline.com/Projects/Ghibli/assets/img/Gemini_Generated_Image_anod90anod90anod.jpg"
+                  width="90%"
+                  alt="sumanonline.com"
+                />
+                </div>
+                <p>
+                    SumanOnline.Com, Suman Online, Suman Online Web, Suman Chakrabortty. <br>We provide premium web services to enhance your digital experience
+            with high-quality solutions.
+                </p>
+                <div class="social-links">
+                    <a href="https://t.me/SumanOnline_Com"><i class="fab fa-telegram"></i></a>
+                    <a href="https://url.sumanonline.com/join-whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/in/sumanchakrabortty8514/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/SumanCH8514"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/SumanCH8514"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <p><i class="fas fa-globe"></i> <a href="https://sumanonline.likesyou.org/" target="_blank">
+                        SumanOnline.likesyou.org</a> </p>
+                <p><i class="fas fa-rupee-sign"></i> <a href="/pay-me/" target="_blank">
+                        Pay Online via QR</a> </p>
+                <p><a href="https://sumanmusic.0-0-0.click/">Music</a></p>
+                <p><a href="https://url.sumanonline.com/">URL Shortener</a></p>
+                <p><a href="https://plyr.0-0-0.click/">Movie Player</a></p>
+            </div>
+            <div class="footer-column">
+                <h3>Page Links</h3>
+                <p><a href="/contact.html" target="_blank">Contact Us</a></p>
+                <p><a href="#">Return policy</a></p>
+                <p><a href="#">Terms and Conditions</a></p>
+                <p><a href="#">Privacy Policy</a></p></a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:contact@sumanonline.com"
+                        target="_blank">contact@sumanonline.com</a></p>
+                <p><i class="fa-brands fa-telegram"></i> <a href="https://t.me/Contact_SumanOnline_bot" target="_blank">
+                        Contact On Telegram</a> </p>
+
+            </div>
+        </div>
+    </footer>
+    <script src="/assets/js/script.js"></script>
+    <div id="copyright">
+        <p style="font-size: 0.7rem; text-align: center">
+            &copy; 2018-<span id="copyright1"></span>
+            <span id="copyright1">
+          <script>
+            document
+              .getElementById("copyright1")
+              .appendChild(document.createTextNode(new Date().getFullYear()));
+          </script>
+        </span>
+            <a href="https://sumanonline.com " target="_blank"
+                style="text-decoration: none; font-weight: bold">SumanOnline.com</a>
+            | All Rights Reserved.
+        </p>
+    </div>
+
+    <script>
+        // Password visibility toggle
+        const showBtns = document.querySelectorAll('.show');
+        
+        showBtns.forEach(showBtn => {
+            showBtn.addEventListener('click', function () {
+                const passField = this.previousElementSibling; // Target the associated input field
+                if (passField.type === "password") {
+                    passField.type = "text";
+                    this.textContent = "HIDE";
+                } else {
+                    passField.type = "password";
+                    this.textContent = "SHOW";
+                }
+            });
+        });
+        // Toggle between forms
+        function showLogin(event) {
+            if(event) event.preventDefault();
+            document.querySelector('.login-form').style.display = 'block';
+            document.querySelector('.registration-form').style.display = 'none';
+            document.querySelector('.reset-password-form').style.display = 'none';
+        }
+
+        function showRegistration(event) {
+            if(event) event.preventDefault();
+            document.querySelector('.login-form').style.display = 'none';
+            document.querySelector('.registration-form').style.display = 'block';
+            document.querySelector('.reset-password-form').style.display = 'none';
+        }
+        
+        function showResetPassword(event) {
+            if(event) event.preventDefault();
+            document.querySelector('.login-form').style.display = 'none';
+            document.querySelector('.registration-form').style.display = 'none';
+            document.querySelector('.reset-password-form').style.display = 'block';
+        }
+        
+        // Initialize with login form shown
+        document.addEventListener('DOMContentLoaded', function() {
+            showLogin();
+        });
+    </script>
+    
+</body>
+
+</html>
